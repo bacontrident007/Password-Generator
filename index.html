@@ -1,0 +1,65 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gerador de Senha</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+    </head>
+    <body>
+        <div class="principal">
+            <div class="principal-son">
+            <div class="principal-content">
+                <h1 class="principal-title">Gerador de Senhas</h1>  
+                <p class="principal-text">Crie uma senha aleatória</p>
+            </div>
+            <div class="principal-input">
+                <label for="principal-output" class="principal-output-label">Senha:</label>
+                <input type="text" class="principal-output" id="principal-output" readonly>
+                <button class="output-button" onclick="geraSenha()">
+                    <span class="material-symbols-outlined output-icon"> refresh
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="options">
+            <div class="password-size">
+                <p class="password-size-title">Tamanho da Senha</p>
+                <div class="password-size-display">
+                    <button class="password-size-button" onclick="botaoMais()">+</button>
+                    <p class="password-size-number">12</p>
+                    <button class="password-size-button" onclick="botaoMenos()">-</button>
+                </div>
+            </div>
+            <div class="password-alphabet">
+                <div class="password-options">
+                    <input type="checkbox" class="password-checkbox" id="maiusculas" onclick="geraSenha()" checked>
+                    <label for="maiusculas" class="password-checkbox-label">Maiúsculas</label>
+                </div>
+                <div class="password-options">
+                    <input type="checkbox" class="password-checkbox" id="minusculas" onclick="geraSenha()" checked>
+                    <label for="minusculas" class="password-checkbox-label">Minúsculas</label>
+                </div>
+                <div class="password-options">
+                    <input type="checkbox" class="password-checkbox" id="numeros" onclick="geraSenha()">
+                    <label for="numeros" class="password-checkbox-label">Números</label>
+                </div>
+                <div class="password-options">
+                    <input type="checkbox" class="password-checkbox" id="simbolos" onclick="geraSenha()">
+                    <label for="simbolos" class="password-checkbox-label">Símbolos</label>
+                </div>
+            </div>
+            <div class="password-classification">
+                <div class="password-classification-output"></div>
+                <div class="password-strenght weak"></div>
+                <div class="password-classification-text">
+                    <p class="password-classification-item">Fraca</p>
+                    <p class="password-classification-item">Média</p>
+                    <p class="password-classification-item">Forte</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+    <script src="main.js"></script>
+</html>
