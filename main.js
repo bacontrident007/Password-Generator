@@ -52,8 +52,6 @@ function geraSenha(){
 
 geraSenha();
 
-console.log(nivelSenha)
-
 function classificaSenha(forcaSenha){
     nivelSenha.classList.remove("weak")
     nivelSenha.classList.remove("media")
@@ -65,5 +63,4 @@ function classificaSenha(forcaSenha){
     } else {
         nivelSenha.classList.add("strong")
     }
-
 }
